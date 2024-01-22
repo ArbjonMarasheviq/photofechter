@@ -1,7 +1,7 @@
 const grayscaleToggle = document.getElementById("grayscaleToggle");
 const fetchPhotosBtn = document.getElementById("fetchPhotosBtn");
 const photoContainer = document.getElementById("photoContainer");
-let page_number = 2;
+let random = 2;
 
 grayscaleToggle.addEventListener("change", () => {
   if (grayscaleToggle.checked) {
@@ -12,10 +12,10 @@ grayscaleToggle.addEventListener("change", () => {
 });
 
 fetchPhotosBtn.addEventListener("click", () => {
-  fetch(`https://picsum.photos/v2/list?page=${page_number}&limit=4`)
+  fetch(`https://picsum.photos/200/300${random}&limit=4`)
     .then((response) => response.json())
     .then((data) => {
-      page_number += 1;
+      random += 1;
       photoContainer.innerHTML = "";
       data.forEach((photo) => {
         const img = document.createElement("img");
