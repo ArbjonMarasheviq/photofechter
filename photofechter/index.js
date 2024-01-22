@@ -12,7 +12,7 @@ grayscaleToggle.addEventListener("change", () => {
 });
 
 fetchPhotosBtn.addEventListener("click", () => {
-  fetch(`https://picsum.photos/200/300${random}&limit=4`)
+  fetch(`https://picsum.photos/v2/list?page=${random}&limit=4`)
     .then((response) => response.json())
     .then((data) => {
       random += 1;
