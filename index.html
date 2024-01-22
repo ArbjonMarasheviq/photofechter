@@ -3,8 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Photo Fechter</title>
     <style>
+      .container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+
       .container {
         display: flex;
         justify-content: space-between;
@@ -17,7 +31,7 @@
       }
 
       .slider-text {
-        margin-left: 10px;
+        margin-left: 55px;
       }
 
       .switch {
@@ -28,14 +42,12 @@
         height: 2em;
       }
 
-      /* Hide default HTML checkbox */
       .switch input {
         opacity: 0;
         width: 0;
         height: 0;
       }
 
-      /* The slider */
       .slider {
         position: absolute;
         cursor: pointer;
@@ -46,13 +58,14 @@
         background-color: #ccc;
         transition: 0.4s;
         border-radius: 30px;
+        margin-bottom: 4px;
       }
 
       .slider:before {
         position: absolute;
         content: "";
-        height: 1.4em;
-        width: 1.4em;
+        height: 1em;
+        width: 1em;
         border-radius: 20px;
         left: 0.3em;
         bottom: 0.3em;
@@ -72,7 +85,7 @@
         transform: translateX(1.5em);
       }
 
-      .custom-btn {
+      .butoni {
         width: 160px;
         height: 40px;
         color: #fff;
@@ -91,7 +104,7 @@
         outline: none;
       }
 
-      .btn-1 {
+      .butoni {
         background: rgb(96, 9, 240);
         background: linear-gradient(
           0deg,
@@ -101,45 +114,140 @@
         border: none;
       }
 
-      .btn-1:before {
+      .butoni:before {
         height: 0%;
         width: 2px;
       }
 
-      .btn-1 {
+      .butoni {
         display: inline-block;
-        padding: 10px 20px;
         background-color: #eaeaea;
         border: none;
+        margin-right: 40px;
       }
+
       .vogel {
-            width: 200px;
-            height: auto;
-            
-        }
+        width: 200px;
+        height: auto;
+        margin-right: 16px;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0 auto;
+        padding: 0;
+        max-width: 750px;
+      }
+
+      .container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .photo-container {
+        max-width: 750px;
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .vogel {
+        width: 45%;
+        height: auto;
+        margin-right: 16px;
+        margin-bottom: 16px;
+      }
+
+      .slider-text {
+        font-size: 14px;
+      }
+
+      .grayscale img {
+        filter: grayscale(100%);
+      }
     </style>
   </head>
-  <img src="https://fastly.picsum.photos/id/3/5000/3333.jpg?hmac=GDjZ2uNWE3V59PkdDaOzTOuV3tPWWxJSf4fNcxu4S2g" alt="Imazh 1" class="vogel">
-    <img src="https://fastly.picsum.photos/id/3/5000/3333.jpg?hmac=GDjZ2uNWE3V59PkdDaOzTOuV3tPWWxJSf4fNcxu4S2g" alt="Imazh 2" class="vogel">
-<br>
-    <img src="https://fastly.picsum.photos/id/3/5000/3333.jpg?hmac=GDjZ2uNWE3V59PkdDaOzTOuV3tPWWxJSf4fNcxu4S2g" alt="Imazh 3" class="vogel">
-    <img src="https://fastly.picsum.photos/id/3/5000/3333.jpg?hmac=GDjZ2uNWE3V59PkdDaOzTOuV3tPWWxJSf4fNcxu4S2g" alt="Imazh 4" class="vogel">
 
   <body>
-    
-    </body>
-</html>
+    <div>
+      <h1>Photo Fetcher</h1>
 
-    <div class="container">
-      <div class="slider-container">
-        <label class="switch">
-          <input type="checkbox" />
-          <span class="slider"></span>
-        </label>
-        <span class="slider-text">Make Photos Grayscale</span>
+      <div class="container">
+        <div class="slider-container">
+          <label class="switch">
+            <input type="checkbox" id="grayscaleToggle" />
+            <span class="slider"></span>
+          </label>
+          <span class="slider-text">Make Photos Grayscale</span>
+        </div>
+
+        <button class="butoni" id="fetchPhotosBtn">Fetch New Photos</button>
       </div>
 
-      <button class="custom-btn btn-1">Fetch New Photos</button>
+      <div class="photo-container" id="photoContainer">
+        <img
+          src="https://fastly.picsum.photos/id/12/2500/1667.jpg?hmac=Pe3284luVre9ZqNzv1jMFpLihFI6lwq7TPgMSsNXw2w"
+          alt="Imazh 1"
+          class="vogel"
+        />
+        <img
+          src="https://fastly.picsum.photos/id/28/4928/3264.jpg?hmac=GnYF-RnBUg44PFfU5pcw_Qs0ReOyStdnZ8MtQWJqTfA"
+          alt="Imazh 2"
+          class="vogel"
+        />
+        <br />
+        <img
+          src="https://fastly.picsum.photos/id/11/2500/1667.jpg?hmac=xxjFJtAPgshYkysU_aqx2sZir-kIOjNR9vx0te7GycQ"
+          alt="Imazh 3"
+          class="vogel"
+        />
+        <img
+          src="https://fastly.picsum.photos/id/18/2500/1667.jpg?hmac=JR0Z_jRs9rssQHZJ4b7xKF82kOj8-4Ackq75D_9Wmz8"
+          alt="Imazh 4"
+          class="vogel"
+        />
+      </div>
     </div>
+
+    <script>
+      const grayscaleToggle = document.getElementById("grayscaleToggle");
+      const fetchPhotosBtn = document.getElementById("fetchPhotosBtn");
+      const photoContainer = document.getElementById("photoContainer");
+      let page_number = 2;
+
+      grayscaleToggle.addEventListener("change", () => {
+        if (grayscaleToggle.checked) {
+          photoContainer.classList.add("grayscale");
+        } else {
+          photoContainer.classList.remove("grayscale");
+        }
+      });
+
+      fetchPhotosBtn.addEventListener("click", () => {
+        fetch(`https://picsum.photos/v2/list?page=${page_number}&limit=4`)
+          .then((response) => response.json())
+          .then((data) => {
+            page_number += 1; // Rrit vlerën e page_number për të marrë faqen tjetër në kërkesën e ardhshme
+            photoContainer.innerHTML = "";
+            data.forEach((photo) => {
+              const img = document.createElement("img");
+              img.src = photo.download_url;
+              img.alt = `Image by ${photo.author}`;
+              img.classList.add("vogel");
+              photoContainer.appendChild(img);
+            });
+          })
+          .catch((error) => console.log(error));
+      });
+    </script>
   </body>
 </html>
