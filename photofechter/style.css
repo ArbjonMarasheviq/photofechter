@@ -53,7 +53,7 @@ body {
   bottom: 0;
   background-color: #585858;
   transition: 0.4s;
-  border-radius: 30px;
+  border-radius: 25px;
   margin-bottom: 4px;
 }
 
@@ -70,7 +70,7 @@ body {
 }
 
 .switch input:checked + .slider {
-  background-color: rgb(96, 9, 240);
+  background-color: #6b4ad5;
 }
 
 .switch input:focus + .slider {
@@ -100,12 +100,7 @@ body {
 }
 
 .butoni {
-  background: rgb(96, 9, 240);
-  background: linear-gradient(
-    0deg,
-    rgba(96, 9, 240, 1) 0%,
-    rgba(129, 5, 240, 1) 100%
-  );
+  background-color: #6b4ad5;
   border: none;
 }
 
@@ -116,7 +111,6 @@ body {
 
 .butoni {
   display: inline-block;
-  background-color: #eaeaea;
   border: none;
   margin-right: 40px;
 }
