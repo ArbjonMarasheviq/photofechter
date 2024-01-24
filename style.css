@@ -1,4 +1,3 @@
-
 .container {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -167,7 +166,7 @@ h1 {
 }
 
 .text-block {
-  position: absolute; 
+  position: absolute;
   right: 20px;
   background-color: rgba(0,0,0,0.5);
   color: white;
@@ -176,13 +175,14 @@ h1 {
   width: 42.4%;
   margin-bottom: 128px;
   margin-top: 633px;
-}
+  z-index: 1; 
+  }
 
 .text-block2 {
   position: absolute; 
   right: 374px;
   background-color: rgba(0,0,0,0.5);
-  color: white;
+  color: rgb(255, 255, 255);
   padding-left: 20px;
   margin-right: 17px;
   width: 42.4%;

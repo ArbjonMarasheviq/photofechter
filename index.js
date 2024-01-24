@@ -11,6 +11,7 @@ grayscaleToggle.addEventListener("change", () => {
     }
 });
 
+  
 fetchPhotosBtn.addEventListener("click", () => {
     fetch(`https://picsum.photos/v2/list?page=${random}&limit=4`)
         .then((response) => response.json())
@@ -24,6 +25,7 @@ fetchPhotosBtn.addEventListener("click", () => {
                 img.classList.add("image");
                 photoContainer.appendChild(img);
             });
-        })
+        })  
         .catch((error) => console.log(error));
+        
 });
