@@ -1,3 +1,4 @@
+
 .container {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -163,4 +164,49 @@ h1 {
 
 .photo-container {
   position: relative;
+}
+
+.text-block {
+  position: absolute; 
+  right: 20px;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  padding-left: 20px;
+  margin-right: 17px;
+  width: 42.4%;
+  margin-bottom: 128px;
+  margin-top: 633px;
+}
+
+.text-block2 {
+  position: absolute; 
+  right: 374px;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  padding-left: 20px;
+  margin-right: 17px;
+  width: 42.4%;
+  margin-bottom: 128px;
+}
+
+.text-block3 {
+  position: absolute; 
+  right: 20px;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  padding-left: 20px;
+  margin-right: 17px;
+  width: 42.4%;
+  margin-bottom: 128px;
+}
+
+.text-block4 {
+  position: absolute; 
+  right: 374px;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  padding-left: 20px;
+  margin-right: 17px;
+  width: 42.4%;
+  margin-top: 505px;
 }
